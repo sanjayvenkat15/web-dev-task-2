@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .header {
+            margin-bottom: 20px; /* Adjust as needed */
+        }
+        .container {
+            max-width: 600px; /* Adjust max-width as needed */
+        }
+        .contact-section {
+            margin-top: 20px; /* Adjust as needed */
+        }
+        input[type="text"],
+        input[type="email"],
+        button {
+            margin: 10px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Contact Us</h1>
+        <nav class="navbar">
+            <a href="index.html" style="--i:1" class="active">Home</a>
+            <a href="about.html" style="--i:2">About</a> <!-- Link to About page -->
+            <a href="featured.html" style="--i:4">Features</a> <!-- Placeholder for Featured page -->
+            <a href="contact.html" style="--i:5">Contact</a> <!-- Link to Contact page -->
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>Feel free to contact us for any inquiries or questions.</p>
+            <form id="reservationForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <button type="submit" id="reserveButton">Reserve Your Spot</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Car Launching</p>
+    </footer>
+    <script>
+        // JavaScript code for handling reservation form submission
+        document.getElementById('reservationForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent form submission
+    
+          // Get input values
+          var name = document.getElementById('name').value;
+          var email = document.getElementById('email').value;
+    
+          // You can send this data to the server using AJAX for further processing
+          // For now, we'll just display an alert with the reservation details
+          alert('Thank you, ' + name + '! Your reservation has been confirmed. We will contact you at ' + email + '.');
+        });
+      </script>
+</body>
+
+</html>

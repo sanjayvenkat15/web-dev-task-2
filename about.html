@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        .header {
+            margin-bottom: 20px; /* Adjust as needed */
+        }
+
+        .text-animation {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .heading-animation {
+            animation: changeColor 2s infinite alternate;
+        }
+
+        @keyframes changeColor {
+            from {
+                color: #1743e3; /* Starting color */
+            }
+            to {
+                color: #ff4500; /* Ending color */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="heading-animation">About Us</h1>
+        <nav class="navbar">
+            <a href="index.html" style="--i:1" class="active">Home</a>
+            <a href="about.html" style="--i:2">About</a> <!-- Link to About page -->
+            <a href="featured.html" style="--i:4">Features</a> <!-- Placeholder for Featured page -->
+            <a href="contact.html" style="--i:5">Contact</a> <!-- Link to Contact page -->
+        </nav>
+    </header>
+
+    <section class="about-section">
+        <div class="container">
+            <h2 class="text-animation">Welcome to our company!</h2>
+            <p class="text-animation">At Car Launching, we're passionate about providing exceptional car dealing experiences. With a commitment to customer satisfaction and a dedication to excellence, we strive to redefine the way you buy and sell cars. Our team of experts is here to assist you every step of the way, ensuring you find the perfect vehicle that fits your needs and budget.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p class="text-animation">&copy; 2024 Car Launching</p>
+    </footer>
+
+    <script>
+        // JavaScript code to apply animation to elements with the "text-animation" class
+        const textElements = document.querySelectorAll('.text-animation');
+        textElements.forEach(element => {
+            element.style.opacity = 0;
+            element.style.animation = 'fadeIn 1s forwards';
+        });
+    </script>
+</body>
+
+</html>

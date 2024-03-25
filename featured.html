@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Cars</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .featured-section {
+            max-width: 800px; /* Adjust max-width as needed */
+            margin: auto; /* Center the featured section */
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Featured Cars</h1>
+        <nav class="navbar">
+            <a href="index.html" style="--i:1" class="active">Home</a>
+            <a href="about.html" style="--i:2">About</a>
+            <a href="featured.html" style="--i:4">Features</a>
+            <a href="contact.html" style="--i:5">Contact</a>
+        </nav>
+    </header>
+
+    <section class="featured-section">
+        <div class="container">
+            <h2>Our Featured Cars</h2>
+            <p>Here are some of the latest and most popular cars in our inventory.</p>
+            <div class="featured-cars">
+                <div class="car">
+                    <img src="car1.jpg" alt="Car 1" style="width: 200px; height: 150px;">
+                    <h3>Model 1</h3>
+                    <p></p>
+                </div>
+                <div class="car">
+                    <img src="car2.jpg" alt="Car 2" style="width: 300px; height: 200px;">
+                    <h3>Model 2</h3>
+                    <p></p>
+                </div>
+                
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Car Launching</p>
+    </footer>
+</body>
+
+</html>
